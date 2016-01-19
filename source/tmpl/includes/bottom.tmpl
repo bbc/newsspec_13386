@@ -1,0 +1,72 @@
+<%
+if (scaffoldLite) {
+%>
+    <%= inlineLiteJs() %>
+<%
+} else {
+%>
+    <div class="footer"><div class="footer--logo"></div></div>
+    <script>
+        var browserType = null;
+
+        if ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window) {
+            browserType = 'html5';
+        }
+        else if (document.documentMode && (document.documentMode < 9)) {
+            browserType = 'legacyie';
+        }
+
+        if (browserType) {
+            var debugMode = setDebugMode(),
+                settings  = getSettings(browserType, debugMode),
+                done      = false,
+                script    = document.createElement('script');
+            script.src = "<%= pathStatic %>/<%= vocab_dir %>/js/lib/vendors/require/require-2.1.20.js";
+            script.type = "text/javascript";
+            script.onload = script.onreadystatechange = function() {
+                if ( !done && (!this.readyState || this.readyState === "loaded" || this.readyState === "complete") ) {
+                    done = true;
+                    require.config(settings.requireConfig);
+                    require([settings.moduleToStartApp], function () {
+                        if (!debugMode) {
+                            require(['app']);
+                        }
+                    });
+                }
+            }
+            document.body.appendChild(script);
+        }
+
+        function setDebugMode() {
+            var debugForced = window.location.href.match(/debug=true/);
+            if (debugForced) {
+                return true;
+            }
+            return <%= debug %>;
+        }
+
+        function getSettings(browserType, debug) {
+            var config = {
+                    urlArgs: "v=<%= version %>",
+                    baseUrl: "<%= pathStatic %>/<%= vocab_dir %>/js/"
+                },
+                moduleToStartApp = '<%= pathStatic %>/<%= vocab_dir %>/js/all-'+browserType+'.js';
+
+            if (debug) {
+                var jqueryVersion   = (browserType === 'html5') ? 'jquery-2.1.5' : 'jquery-1.11.4';
+                config.paths        = <%= amdModulePaths %>;
+                config.paths.jquery = './lib/vendors/jquery/' + jqueryVersion;
+                config.paths.app    = './app';
+                moduleToStartApp    = '<%= pathStatic %>/<%= vocab_dir %>/js/app.js';
+            }
+            return {
+                requireConfig: config,
+                moduleToStartApp: moduleToStartApp
+            };
+        }
+    </script>
+<%
+}
+%>
+</body>
+</html>

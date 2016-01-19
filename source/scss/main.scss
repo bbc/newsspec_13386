@@ -1,0 +1,22 @@
+@import "news_special/defaults";
+@import "app";
+
+@import "news_special/mixins";
+@import "lineChart";
+@import "temperature";
+
+.ns_rtl {
+    direction: rtl;
+}
+
+.b-g-p, .b-r .b-g-p {
+    padding: 0 8px;
+    box-sizing: content-box;
+}
+
+.main {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.375em;
+    color: #404040;
+}

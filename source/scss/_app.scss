@@ -1,0 +1,67 @@
+/* separate your sass into different files to keep it maintainable!  */
+
+.main {
+
+    .newsspec_13386__title {
+        clear: both;
+        text-align: center;
+        font-size: 1.250em;
+        margin-top: 40px
+    }
+
+    .newsspec_13386__subtitle {
+        text-align: center;
+        font-size: 1.125em;
+    }
+
+    p {
+        width: 100%;
+        max-width: 646px;
+        margin: 18px auto 0 auto;
+    }
+
+    .newsspec_13386__source {
+        font-size: 0.75em;
+    }
+
+    .newsspec_13386__svg-alternative {
+        width: 100%;
+    }
+
+    .newsspec_13386__replay {
+        cursor: pointer;
+        display: block;
+        background-color: #006666;
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 12px 8px;
+        border: none;
+        -webkit-appearance: button;
+    }
+    .newsspec_13386__replay:hover {
+        background-color: #007f7f;
+    }
+    .newsspec_13386__replay:active,
+    .newsspec_13386__replay:focus {
+        outline: -webkit-focus-ring-color auto 5px;
+    }
+
+    @include respondMinMax(600px, false) {
+
+        .newsspec_13386__title {
+            text-align: center;
+            font-size: 1.500em;
+        }
+
+        .newsspec_13386__subtitle {
+            text-align: center;
+            font-size: 1.250em;
+        }
+
+        .newsspec_13386__source {
+            font-size: 0.813em;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+$line-color: #cfcfcf;
+
+.newsspec_13386--line-chart {
+}
+
+.newsspec_13386__line-chart__svg {
+    width: 100%;
+    max-width: 650px;
+    display: block;
+    margin: 0 auto;
+
+    .newsspec_13386__line {
+        fill: none;
+        stroke-width: 1px;
+        stroke: $line-color;
+    }
+
+    .count-text {
+        font-size: 24px;
+        font-weight: bold;
+        fill: #404040;
+    }
+
+    .year-text {
+        font-size: 20px;
+        font-weight: bold;
+        fill: #404040;
+    }
+    .tooltips {
+        display: none;
+        cursor: pointer;
+        opacity: 0;
+        transition: 0.1s opacity;
+    }
+    .tooltips--always-show,
+    .tooltips:hover {
+        opacity:1;
+        display: block;
+    }
+    .background-rect {
+        fill: transparent;
+    }
+    .graph-mask {
+        rect {
+            fill: #ffffff;
+        }
+    }
+    .animate {
+        transition: 2.00s width;
+    }
+    .axis-container {
+        text {
+            font-family: sans-serif;
+            font-size: 0.75em;
+        }
+    }
+}

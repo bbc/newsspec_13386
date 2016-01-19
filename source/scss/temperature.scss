@@ -1,0 +1,365 @@
+$color-hot: #cc0000;
+$color-cold: #007f7f;
+
+.newsspec_13386__temperature-chart__svg-alternative {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    margin: 18px auto 0 auto;
+}
+.newsspec_13386__temperature-chart {
+    display: none;
+    direction: ltr;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    .newsspec_13386__temperature-chart__svg {
+        overflow: visible;
+    }
+}
+
+.newsspec_13386__temperature-chart__header {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.newsspec_13386__temperature-chart__header--dynamic {
+    min-height: 32px;
+}
+
+.newsspec_13386__line-chart__key {
+    .newsspec_13386__line-chart__key--warmest,
+    .newsspec_13386__line-chart__key--coldest {
+        margin-top: 8px;
+    }
+
+    .newsspec_13386__line-chart__key--warmest {
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 7px;
+            border-top: $color-hot 3px solid;
+            margin-right: 4px;
+        }
+    }
+    .newsspec_13386__line-chart__key--coldest { 
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 7px;
+            border-top: $color-cold 3px solid;
+            margin-right: 4px;
+        }
+    }
+
+    .newsspec_13386__line-chart__key--avg,
+    .newsspec_13386__line-chart__key--hotter,
+    .newsspec_13386__line-chart__key--colder,
+    .newsspec_13386__line-chart__key__months {
+        display: none;
+    }
+}
+
+.newsspec_13386__temperature-chart__header--warmest,
+.newsspec_13386__temperature-chart__header--warmest-1,
+.newsspec_13386__temperature-chart__header--warmest-2,
+.newsspec_13386__temperature-chart__header--warmest-3,
+.newsspec_13386__temperature-chart__header--warmest-4,
+.newsspec_13386__temperature-chart__header--warmest-5,
+.newsspec_13386__temperature-chart__header--warmest-6,
+.newsspec_13386__temperature-chart__header--warmest-7,
+.newsspec_13386__temperature-chart__header--warmest-8,
+.newsspec_13386__temperature-chart__header--warmest-9,
+.newsspec_13386__temperature-chart__header--warmest-10 {
+    .newsspec_13386__temperature-chart__header__year {
+        color: $color-hot;
+    }
+}
+
+.newsspec_13386__temperature-chart__header--coldest,
+.newsspec_13386__temperature-chart__header--coldest-1,
+.newsspec_13386__temperature-chart__header--coldest-2,
+.newsspec_13386__temperature-chart__header--coldest-3,
+.newsspec_13386__temperature-chart__header--coldest-4,
+.newsspec_13386__temperature-chart__header--coldest-5,
+.newsspec_13386__temperature-chart__header--coldest-6,
+.newsspec_13386__temperature-chart__header--coldest-7,
+.newsspec_13386__temperature-chart__header--coldest-8,
+.newsspec_13386__temperature-chart__header--coldest-9,
+.newsspec_13386__temperature-chart__header--coldest-10 {
+    .newsspec_13386__temperature-chart__header__year {
+        color: $color-cold;
+    }
+}
+
+.newsspec_13386__temperature-chart__header__year {
+    display: inline-block;
+    font-size: 1.500em;
+    line-height: 1.125em;
+    margin-right: 4px;
+}
+
+.newsspec_13386__temperature-chart__header__rank-container {
+    display: inline-block;
+    min-height: 20px;
+}
+
+.newsspec_13386__temperature-chart__header__rank {
+    display: none;
+    font-size: 1.125em;
+    font-weight: normal;
+    line-height: 1.5em;
+    overflow: visible;
+    transition: 1.0s opacity;
+}
+
+.newsspec_13386__temperature-chart__header--warmest {
+    .newsspec_13386__temperature-chart__header__rank--warmest-0 {
+        display: block;
+    }
+}
+
+.newsspec_13386__temperature-chart__source {
+    float: left;
+    width: auto;
+    margin-left: 96px;
+    font-size: 0.813em;
+}
+
+.newsspec_13386__temperature-chart__replay {
+    display: block;
+    float: right;
+    margin-top: 8px;
+    margin-bottom: 32px;
+    margin-right: 16px;
+}
+
+.newsspec_13386__temperature-chart__svg {
+    height: 370px; 
+    max-width: 600px;
+    margin-right: 0;
+    overflow: visible;
+
+    .newsspec_13386__temperature-chart__line--cold,
+    .newsspec_13386__temperature-chart__line--coldest {
+        stroke: $color-cold;
+    }
+
+    .newsspec_13386__temperature-chart__line--warm,
+    .newsspec_13386__temperature-chart__line--warmest {
+        stroke: $color-hot;
+    }
+
+    .newsspec_13386__temperature-chart__line--coldest,
+    .newsspec_13386__temperature-chart__line--warmest {
+        stroke-width: 4px;
+    }
+
+    .newsspec_13386__extreme:hover {
+        stroke-width: 2;
+        opacity: 1!important;
+    }
+
+    .x-axis-tick,
+    .x-axis {
+        stroke: #efefef;
+        stroke-width: 1;
+    }
+
+    .x-axis-ticks {
+        text {
+            display: block;
+            font-size: 14px;
+        }  
+
+        .newsspec_13386__temperature-chart__text--x-axis-title-label {
+            fill: #222222;
+        }
+    }
+
+    .x-axis-tick:first-of-type,
+    .x-axis-tick:last-of-type {
+        stroke: #727272;
+    }
+
+
+    .y-axis-container {
+        direction: ltr;
+    }
+
+    .y-axis-ticks {
+        text {
+            fill: #727272;
+            font-size: 14px;
+        }
+
+        .newsspec_13386__temperature-chart__text--avg {
+            fill: #222222;
+        }
+
+        .y-axis-tick--avg {
+            stroke: #222222;
+            stroke-width: 2;
+        }
+
+        .newsspec_13386__temperature-chart__label--extremes {
+            display: none;
+        }
+    }
+
+        
+    /*.newsspec_13386__temperature-chart__tooltip {
+        opacity: 0;
+
+        text {
+            font-size: 32px;
+            fill: #000000;
+        }
+
+        transition: opacity 0.5s;
+    }*/
+}
+
+@include respondMinMax (false, 359px) {
+
+    .newsspec_13386__temperature-chart__svg {
+        .x-axis-ticks {
+            text:nth-of-type(odd) {
+                display: none;
+            }
+        }
+    }
+
+}
+
+@include respondMinMax (600px, false) {
+
+    .newsspec_13386__temperature-chart__header {
+        width: 458px;
+        margin-left: 98px;
+    }
+
+    .newsspec_13386__line-chart__key {
+        width: 458px;
+        margin-left: 98px;
+
+        .newsspec_13386__line-chart__key--warmest,
+        .newsspec_13386__line-chart__key--coldest {
+            float: left;
+            width: 40%;
+        }
+    }
+
+    /*.newsspec_13386__temperature-chart__replay {
+        margin-right: 70px;
+    }
+
+    .newsspec_13386__temperature-chart__svg {
+        margin-right: 70px;
+    }*/
+}
+
+@include respondMinMax (700px, false) {
+
+    .newsspec_13386__temperature-chart__svg {
+        .y-axis-ticks {
+            .newsspec_13386__temperature-chart__label--extremes {
+                display: block;
+                fill: #222222;
+            }
+        }
+    }
+}
+
+
+
+.ns_rtl {
+
+    .newsspec_13386__temperature-chart__header,
+    .newsspec_13386__line-chart__key,
+    .newsspec_13386__temperature-chart__source {
+        direction: rtl;
+        clear: both;
+        float: left;
+        width: 100%;
+        max-width: 600px;
+        padding-right: 12px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .newsspec_13386__line-chart__key {
+
+        .newsspec_13386__line-chart__key--warmest,
+        .newsspec_13386__line-chart__key--coldest {
+            float: right;
+            width: 40%;
+        }
+
+        .newsspec_13386__line-chart__key--warmest {
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 20px;
+                height: 7px;
+                border-top: $color-hot 3px solid;
+                margin-left: 4px;
+            }
+        }
+        .newsspec_13386__line-chart__key--coldest { 
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 20px;
+                height: 7px;
+                border-top: $color-cold 3px solid;
+                margin-left: 4px;
+            }
+        }
+    }
+
+    .newsspec_13386__greenhouse-gases-chart__header,
+    .newsspec_13386__greenhouse-gases-chart__source {   
+        direction: rtl;
+        width: 100%;
+        max-width: 650px;
+        padding-right: 70px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@include respondMinMax (600px, false) {
+    .ns_rtl {
+        .newsspec_13386__line-chart__key {
+            .newsspec_13386__line-chart__key--warmest,
+            .newsspec_13386__line-chart__key--coldest {
+                float: right;
+                width: 40%;
+            }
+
+            .newsspec_13386__line-chart__key--warmest {
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    width: 20px;
+                    height: 7px;
+                    border-top: $color-hot 3px solid;
+                    margin-left: 4px;
+                }
+            }
+            .newsspec_13386__line-chart__key--coldest { 
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    width: 20px;
+                    height: 7px;
+                    border-top: $color-cold 3px solid;
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+}

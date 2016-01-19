@@ -1,0 +1,11 @@
+@mixin box-sizing {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin position-left($l-pos) {
+    position: absolute;
+    top: 0;
+    left: $l-pos;
+}

@@ -1,0 +1,172 @@
+{
+    "afrique": {
+        "lang": "fr",
+        "name": "afrique",
+        "font": "standard"
+    },
+    "arabic": {
+        "lang": "ar",
+        "name": "arabic",
+        "font": "ar-ur"
+    },
+    "arabic_1024": {
+        "lang": "ar",
+        "name": "arabic",
+        "font": "ar-ur"
+    },
+    "azeri": {
+        "lang": "az",
+        "name": "azeri",
+        "font": "standard"
+    },
+    "bengali": {
+        "lang": "bn",
+        "name": "bengali",
+        "font": "standard"
+    },
+    "brasil": {
+        "lang": "pt-BR",
+        "name": "portuguese",
+        "font": "standard"
+    },
+    "burmese": {
+        "lang": "my",
+        "name": "burmese",
+        "font": "my"
+    },
+    "chinese_simp": {
+        "lang": "zh-Hans",
+        "name": "chinese",
+        "font": "zh-hans_simp"
+    },
+    "chinese_trad": {
+        "lang": "zh-Hans",
+        "name": "chinese",
+        "font": "zh-hans"
+    },
+    "english": {
+        "lang": "en",
+        "name": "english",
+        "font": "standard"
+    },
+    "gahuza": {
+        "lang": "rw",
+        "name": "gahuza",
+        "font": "standard"
+    },
+    "greatlakes": {
+        "lang": "ha",
+        "name": "hausa",
+        "font": "standard"
+    },
+    "hausa": {
+        "lang": "ha",
+        "name": "hausa",
+        "font": "standard"
+    },
+    "hindi": {
+        "lang": "hi",
+        "name": "hindi",
+        "font": "hi"
+    },
+    "indonesia": {
+        "lang": "id",
+        "name": "indonesia",
+        "font": "standard"
+    },
+    "kyrgyz": {
+        "lang": "ky",
+        "name": "kyrgyz",
+        "font": "standard"
+    },
+    "mundo": {
+        "lang": "es",
+        "name": "mundo",
+        "font": "standard"
+    },
+    "nepali": {
+        "lang": "ne",
+        "name": "nepali",
+        "font": "ne"
+    },
+    "pashto": {
+        "lang": "ps",
+        "name": "pashto",
+        "font": "ar-ur"
+    },
+    "persian": {
+        "lang": "fa",
+        "name": "persian",
+        "font": "ar-ur"
+    },
+    "portuguese": {
+        "lang": "pt-BR",
+        "name": "portuguese",
+        "font": "standard"
+    },
+    "russian": {
+        "lang": "ru",
+        "name": "russian",
+        "font": "standard"
+    },
+    "sinhala": {
+        "lang": "si",
+        "name": "sinhala",
+        "font": "si"
+    },
+    "somali": {
+        "lang": "so",
+        "name": "somali",
+        "font": "standard"
+    },
+    "swahili": {
+        "lang": "sw",
+        "name": "swahili",
+        "font": "standard"
+    },
+    "tamil": {
+        "lang": "ta",
+        "name": "tamil",
+        "font": "ta"
+    },
+    "tajik": {
+        "lang": "tg",
+        "name": "tajik",
+        "font": "standard"
+    },
+    "turkish": {
+        "lang": "tr",
+        "name": "turkce",
+        "font": "standard"
+    },
+    "urdu": {
+        "lang": "ur",
+        "name": "urdu",
+        "font": "ar-ur"
+    },
+    "ukchina_simp": {
+        "lang": "zh-Hans",
+        "name": "ukchina",
+        "font": "zh-hans_simp"
+    },
+    "ukchina_trad": {
+        "lang": "zh-Hans",
+        "name": "ukchina",
+        "font": "zh-hans"
+    },
+    "ukrainian": {
+        "lang": "uk",
+        "name": "ukrainian",
+        "font": "standard"
+    },
+    "uzbek": {
+        "lang": "uz",
+        "name": "uzbek",
+        "font": "standard"
+    },
+    "vietnamese": {
+        "lang": "vi",
+        "name": "vietnamese",
+        "font": "standard"
+    }
+}

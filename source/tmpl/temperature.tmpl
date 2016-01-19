@@ -1,0 +1,58 @@
+    
+    <img class="newsspec_13386__temperature-chart__svg-alternative" src="<%= pathStatic %>/<%= vocab_dir %>/img/fallbacks/<%= vocab_dir %>.png" alt="">
+    <div class="newsspec_13386__temperature-chart">
+        <h4 class="newsspec_13386__temperature-chart__header"><%= temperature_char_title %></h4>
+        <h5 class="newsspec_13386__temperature-chart__header newsspec_13386__temperature-chart__header--dynamic newsspec_13386__temperature-chart__header--warmest" aria-hidden="true">
+            <div class="newsspec_13386__temperature-chart__header__year">2015</div>
+            <div class="newsspec_13386__temperature-chart__header__rank-container">
+                <span class="newsspec_13386__temperature-chart__header__rank newsspec_13386__temperature-chart__header__rank--coldest-0"><%= coldest %></span>
+                <span class="newsspec_13386__temperature-chart__header__rank newsspec_13386__temperature-chart__header__rank--coldest-1"><%= second_coldest %></span>
+                <span class="newsspec_13386__temperature-chart__header__rank newsspec_13386__temperature-chart__header__rank--coldest-2"><%= third_coldest %></span>
+                <span class="newsspec_13386__temperature-chart__header__rank newsspec_13386__temperature-chart__header__rank--coldest-3"><%= fourth_coldest %></span>
+                <span class="newsspec_13386__temperature-chart__header__rank newsspec_13386__temperature-chart__header__rank--coldest-4"><%= fifth_coldest %></span>
+                <span class="newsspec_13386__temperature-chart__header__rank newsspec_13386__temperature-chart__header__rank--coldest-5"><%= sixth_coldest %></span>
+                <span class="newsspec_13386__temperature-chart__header__rank newsspec_13386__temperature-chart__header__rank--coldest-6"><%= seventh_coldest %></span>
+                <span class="newsspec_13386__temperature-chart__header__rank newsspec_13386__temperature-chart__header__rank--coldest-7"><%= eighth_coldest %></span>
+                <span class="newsspec_13386__temperature-chart__header__rank newsspec_13386__temperature-chart__header__rank--coldest-8"><%= ninth_coldest %></span>
+                <span class="newsspec_13386__temperature-chart__header__rank newsspec_13386__temperature-chart__header__rank--coldest-9"><%= tenth_coldest %></span>
+
+                <span class="newsspec_13386__temperature-chart__header__rank newsspec_13386__temperature-chart__header__rank--warmest-0"><%= warmest %></span>
+                <span class="newsspec_13386__temperature-chart__header__rank newsspec_13386__temperature-chart__header__rank--warmest-1"><%= second_warmest %></span>
+                <span class="newsspec_13386__temperature-chart__header__rank newsspec_13386__temperature-chart__header__rank--warmest-2"><%= third_warmest %></span>
+                <span class="newsspec_13386__temperature-chart__header__rank newsspec_13386__temperature-chart__header__rank--warmest-3"><%= fourth_warmest %></span>
+                <span class="newsspec_13386__temperature-chart__header__rank newsspec_13386__temperature-chart__header__rank--warmest-4"><%= fifth_warmest %></span>
+                <span class="newsspec_13386__temperature-chart__header__rank newsspec_13386__temperature-chart__header__rank--warmest-5"><%= sixth_warmest %></span>
+                <span class="newsspec_13386__temperature-chart__header__rank newsspec_13386__temperature-chart__header__rank--warmest-6"><%= seventh_warmest %></span>
+                <span class="newsspec_13386__temperature-chart__header__rank newsspec_13386__temperature-chart__header__rank--warmest-7"><%= eighth_warmest %></span>
+                <span class="newsspec_13386__temperature-chart__header__rank newsspec_13386__temperature-chart__header__rank--warmest-8"><%= ninth_warmest %></span>
+                <span class="newsspec_13386__temperature-chart__header__rank newsspec_13386__temperature-chart__header__rank--warmest-9"><%= tenth_warmest %></span>
+            </div>
+        </h5>
+        <div class="newsspec_13386__line-chart__key">
+            <p class="newsspec_13386__line-chart__key--warmest"><%= temperature_key_warmest %></p>
+            <p class="newsspec_13386__line-chart__key--coldest"><%= temperature_key_coldest %></p>
+
+            <p class="newsspec_13386__line-chart__key--avg"><%= temperature_average %></p>
+            <p class="newsspec_13386__line-chart__key--hotter"><%= hotter %></p>
+            <p class="newsspec_13386__line-chart__key--colder"><%= colder %></p>
+
+            <div class="newsspec_13386__line-chart__key__months" aria-hidden="true">
+                <h6 class="newsspec_13386__line-chart__key__months__title-label"><%= temperature_months %></h6>
+                <div class="newsspec_13386__line-chart__key__months__label"><%= temperature_month_1 %></div>
+                <div class="newsspec_13386__line-chart__key__months__label"><%= temperature_month_2 %></div>
+                <div class="newsspec_13386__line-chart__key__months__label"><%= temperature_month_3 %></div>
+                <div class="newsspec_13386__line-chart__key__months__label"><%= temperature_month_4 %></div>
+                <div class="newsspec_13386__line-chart__key__months__label"><%= temperature_month_5 %></div>
+                <div class="newsspec_13386__line-chart__key__months__label"><%= temperature_month_6 %></div>
+                <div class="newsspec_13386__line-chart__key__months__label"><%= temperature_month_7 %></div>
+                <div class="newsspec_13386__line-chart__key__months__label"><%= temperature_month_8 %></div>
+                <div class="newsspec_13386__line-chart__key__months__label"><%= temperature_month_9 %></div>
+                <div class="newsspec_13386__line-chart__key__months__label"><%= temperature_month_10 %></div>
+                <div class="newsspec_13386__line-chart__key__months__label"><%= temperature_month_11 %></div>
+                <div class="newsspec_13386__line-chart__key__months__label"><%= temperature_month_12 %></div>
+            </div>
+        </div>
+        <svg class="newsspec_13386__line-chart__svg newsspec_13386__temperature-chart__svg"></svg>
+        <p class="newsspec_13386__temperature-chart__source"><%= temperature_chart_source %></p>
+        <button class="newsspec_13386__replay newsspec_13386__temperature-chart__replay"><%= replay %></button>
+    </div>

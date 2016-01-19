@@ -1,0 +1,71 @@
+<!DOCTYPE html><%
+
+if (typeof translations[vocab_dir] === "undefined") {
+	vocab_dir = "english";
+}
+
+var logoModifier = translations[vocab_dir].name;
+
+%><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<%= translations[vocab_dir].lang %>" lang="<%= translations[vocab_dir].lang %>">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="content-language" content="<%= translations[vocab_dir].lang %>" />
+	<meta http-equiv="Content-Type" content="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<%= inlineStyleElm() %>
+<%
+if (!scaffoldLite) {
+%>
+	<script>
+	(function () {
+
+		function onBbcDomainAccordingTo(urlParam) {
+			var onBbcDomain = false;
+
+			if (urlParam) {
+				var hashtagToIgnore    = urlParam.indexOf('#'),
+					bbcDomainParameter = urlParam.substring(0, hashtagToIgnore !== -1 ? hashtagToIgnore : urlParam.length);
+
+				onBbcDomain = (bbcDomainParameter === 'true');
+			}
+
+			return onBbcDomain;
+		}
+
+		var urlParam = window.location.href.split('onbbcdomain=')[1];
+
+		if (onBbcDomainAccordingTo(urlParam)) {
+		    document.documentElement.className += ' onbbcdomain';
+		}
+	})();
+	</script>
+	<!--[if lt IE 9]>
+	    <link type="text/css" rel="stylesheet" href="<%= pathStatic %>/<%= vocab_dir %>/css/legacy-ie.css?v=<%= version %>" />
+	<![endif]-->
+	<!--[if gt IE 8]><!-->
+	<script>
+	(function () {
+		function oldIE() {
+			return !!(document.documentMode && (document.documentMode < 9));
+		};
+		var styleSheet = oldIE() ? 'legacy-ie':'main';
+		document.write('<link href="<%= pathStatic %>/<%= vocab_dir %>/css/' + styleSheet + '.css?v=<%= version %>" rel="stylesheet" type="text/css" media="all" />');
+	})();
+	</script>
+	<noscript>
+		<link href="<%= pathStatic %>/<%= vocab_dir %>/css/main.css?v=<%= version %>" rel="stylesheet" type="text/css" media="all" />
+	</noscript>
+	<!--<![endif]-->
+<%
+}
+%>
+</head>
+<body>
+<%
+if (!scaffoldLite) {
+%>
+    <div class="masthead"><div class="masthead__logo masthead__logo--<%= logoModifier %>"></div></div>
+<%
+}
+%>

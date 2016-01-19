@@ -1,0 +1,7 @@
+{
+  "name": "Shared dependencies",
+  "dependencies": {
+    "appmanager": "https://github.com/BBCVisualJournalism/appmanager.git",
+    "sharetools": "https://github.com/bbc/news-vj-sharetools.git"
+  }
+}

@@ -1,0 +1,39 @@
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='<%= translations[vocab_dir].lang %>' lang='<%= translations[vocab_dir].lang %>'>
+<head>
+    <meta charset='utf-8' />
+	<meta http-equiv='content-language' content='<%= translations[vocab_dir].lang %>' />
+	<meta http-equiv='Content-Type' content='UTF-8' />
+    <link href='<%= pathStatic %>/<%= vocab_dir %>/css/main.css?v=<%= version %>' rel='stylesheet' type='text/css' media='all' />
+</head>
+<body>
+
+<%= include('main.tmpl') %>
+
+<script>
+    var requireConfig = {
+            urlArgs: 'v=<%= version %>',
+            baseUrl: '<%= pathStatic %>/<%= vocab_dir %>/js/',
+            paths: <%= amdModulePaths %>
+        },
+        moduleToStartApp = '<%= pathStatic %>/<%= vocab_dir %>/js/all-html5.js',
+        done      = false,
+        script    = document.createElement('script');
+    requireConfig.paths['appManager'] = '<%= pathStatic %>/<%= vocab_dir %>/js/appmanager';
+
+    script.src = '<%= pathStatic %>/<%= vocab_dir %>/js/lib/vendors/require/require-2.1.20.js';
+    script.type = 'text/javascript';
+    script.onload = script.onreadystatechange = function() {
+        if ( !done && (!this.readyState || this.readyState === 'loaded' || this.readyState === 'complete') ) {
+            done = true;
+            require.config(requireConfig);
+            require([moduleToStartApp], function () {
+                require(['appManager'], function () {
+                    require(['app'], function (app) {});
+                });
+            });
+        }
+    }
+    document.body.appendChild(script);
+</script>
+</body>
+</html>

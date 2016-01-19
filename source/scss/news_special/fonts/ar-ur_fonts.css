@@ -1,0 +1,9 @@
+@import "http://static.bbci.co.uk/id/0.32.00/style/nassim/ar-sa.css";
+@import "http://static.bbci.co.uk/id/0.32.00/style/nassim/fa-ir.css";
+
+html[lang="ar"] body,
+html[lang="fa"] body {
+    font-family:BBCNassim, Helvetica, arial, verdana, sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.1em;
+}
