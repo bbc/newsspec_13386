@@ -9,7 +9,7 @@ define(['bootstrap', 'd3'], function (news, d3) {
             this.d3El = d3.select(selector);
             this.data = data;
             this.minY = -0.8;
-            this.maxY = 1;
+            this.maxY = 1.2;
             this.anim = 0;
             this.animStopped = false;
             this.hasAnimatedIn = false;
@@ -100,6 +100,8 @@ define(['bootstrap', 'd3'], function (news, d3) {
             });
 
             d3.select(window).on('resize' + multiLineChart.selector, multiLineChart.redraw.bind(multiLineChart));
+
+            multiLineChart.replay();
         },
 
         redraw: function () {
@@ -194,7 +196,7 @@ define(['bootstrap', 'd3'], function (news, d3) {
             multiLineChart.yAxisContainer.selectAll('*').remove();
 
             var yGroup = multiLineChart.yAxisContainer.append('g');
-            for (var j = -0.8; j <= 1; j += 0.2) {
+            for (var j = multiLineChart.minY; j <= multiLineChart.maxY; j += 0.2) {
                 yPos = multiLineChart.yScale(j);
 
                 yGroup.attr('class', 'y-axis-ticks');
@@ -231,13 +233,13 @@ define(['bootstrap', 'd3'], function (news, d3) {
             // // draw y axis extremes labels
             yGroup.append('text')
                 .attr('x', -52)
-                .attr('y', multiLineChart.yScale(-0.8) + 4)
+                .attr('y', multiLineChart.yScale(multiLineChart.minY) + 4)
                 .attr('text-anchor', 'end')
                 .attr('class', 'newsspec_13386__temperature-chart__label--extremes')
                 .text(news.$('.newsspec_13386__line-chart__key--colder').text());
             yGroup.append('text')
                 .attr('x', -52)
-                .attr('y', multiLineChart.yScale(1) + 4)
+                .attr('y', multiLineChart.yScale(multiLineChart.maxY) + 4)
                 .attr('text-anchor', 'end')
                 .attr('class', 'newsspec_13386__temperature-chart__label--extremes')
                 .text(news.$('.newsspec_13386__line-chart__key--hotter').text());
