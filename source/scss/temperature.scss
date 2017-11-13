@@ -134,6 +134,7 @@ $color-cold: #007f7f;
     margin-top: 8px;
     margin-bottom: 32px;
     margin-right: 16px;
+    border-radius: 0;
 }
 
 .newsspec_13386__temperature-chart__svg {
@@ -159,7 +160,7 @@ $color-cold: #007f7f;
 
     .newsspec_13386__extreme:hover {
         stroke-width: 2;
-        opacity: 1!important;
+        opacity: 1;
     }
 
     .x-axis-tick,
