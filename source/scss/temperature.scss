@@ -121,18 +121,35 @@ $color-cold: #007f7f;
     }
 }
 
-.newsspec_13386__temperature-chart__source {
-    float: left;
+.newsspec_13386__temperature-chart__source,
+.newsspec_13386__temperature-chart__note {
     width: auto;
     margin-left: 96px;
     font-size: 0.813em;
+}
+
+.newsspec_13386__temperature-chart__source {
+    clear: left;
+    float: left;
+}
+
+.newsspec_13386__temperature-chart__note {
+    clear: both;
+    margin-top: 16px;
+    margin-bottom: 32px;
+
+    p {
+        margin-left: 0;
+        margin-right: 8px;
+        max-width: 420px;
+    }
 }
 
 .newsspec_13386__temperature-chart__replay {
     display: block;
     float: right;
     margin-top: 8px;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     margin-right: 16px;
     border-radius: 0;
 }
@@ -331,8 +348,10 @@ $color-cold: #007f7f;
         margin-right: auto;
     }
 }
-
 @include respondMinMax (600px, false) {
+    .newsspec_13386__temperature-chart__source {
+        max-width: 480px;
+    }
     .ns_rtl {
         .newsspec_13386__line-chart__key {
             .newsspec_13386__line-chart__key--warmest,
