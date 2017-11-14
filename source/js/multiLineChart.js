@@ -341,6 +341,7 @@ define(['bootstrap', 'd3'], function (news, d3) {
             
 
             if (i === multiLineChart.data.length - 1) {
+                news.$('.newsspec_13386__temperature-chart__header__year').html(this.highestEntries[0]);
                 news.$('.newsspec_13386__temperature-chart__header__rank--warmest-0').css('opacity', 1);
             }
 
