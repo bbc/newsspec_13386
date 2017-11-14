@@ -349,9 +349,6 @@ $color-cold: #007f7f;
     }
 }
 @include respondMinMax (600px, false) {
-    .newsspec_13386__temperature-chart__source {
-        max-width: 480px;
-    }
     .ns_rtl {
         .newsspec_13386__line-chart__key {
             .newsspec_13386__line-chart__key--warmest,
