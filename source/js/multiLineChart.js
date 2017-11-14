@@ -28,7 +28,7 @@ define(['bootstrap', 'd3'], function (news, d3) {
                 1903,
                 1912,
                 1890,
-                1893
+                1913
             ];
             this.highestEntries = [
                 2016,
