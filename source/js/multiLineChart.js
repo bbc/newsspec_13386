@@ -228,7 +228,7 @@ define(['bootstrap', 'd3'], function (news, d3) {
 
             // Wrap the text label for 20th century average to fit available width
             yGroup.selectAll('.newsspec_13386__temperature-chart__text--avg')
-            .call(multiLineChart.wrapTextToWidth, 70);
+            .call(multiLineChart.wrapTextToWidth, 52);
 
             // // draw y axis extremes labels
             yGroup.append('text')

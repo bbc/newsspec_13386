@@ -4,6 +4,11 @@
         "name": "afrique",
         "font": "standard"
     },
+    "french": {
+        "lang": "fr",
+        "name": "afrique",
+        "font": "standard"
+    },
     "arabic": {
         "lang": "ar",
         "name": "arabic",

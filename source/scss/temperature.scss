@@ -266,7 +266,8 @@ $color-cold: #007f7f;
         .newsspec_13386__line-chart__key--warmest,
         .newsspec_13386__line-chart__key--coldest {
             float: left;
-            width: 40%;
+            width: auto;
+            margin-right: 1.5em;
         }
     }
 
