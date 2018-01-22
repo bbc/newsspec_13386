@@ -20,15 +20,15 @@ define(['bootstrap', 'd3'], function (news, d3) {
             // For this chart, we need to denote data outliers
             this.lowestEntries = [
                 1908,
-                1911,
                 1909,
+                1911,
                 1904,
                 1910,
                 1907,
                 1903,
                 1912,
                 1890,
-                1913
+                1893
             ];
             this.highestEntries = [
                 2016,
